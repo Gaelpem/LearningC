@@ -13,22 +13,37 @@ void ft_putchar(char c){
 }
 
 
-void ft_putnumber(int n ){
-       if(n >= 10){
-           ft_putchar('0' + n/10); 
-       }
-        ft_putchar('0' + n%10); 
-  
+void print_val(char i, char j){
+      
 }
 
-void ft_print_number(void){
-     int i = 0; 
-     while(i<= 15){
-          ft_putnumber(i); 
-          i++; 
-     }
+void ft_print_comb(void){
+   char  i ; 
+   char  j; 
+    j = '0';
+    i = '0'; 
+   while(i <='0'){
+    ft_putchar(i); 
+    ft_putchar(',');
+
+      while(j<='2'){
+          ft_putchar(j); 
+     ft_putchar(',');
+
+          j++; 
+      }
+      i++; 
+
+    
+    
+   }
+
+   
+
 }
+
 
 int main(){
-     ft_print_number(); 
+   ft_print_comb(); 
+
 }
