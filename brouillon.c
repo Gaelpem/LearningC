@@ -7,43 +7,57 @@
 
 #include <unistd.h>
 
-
-void ft_putchar(char c){
-     write(1,&c,1); 
+void ft_print(char c){
+    write(1,&c,1); 
 }
 
-
-void print_val(char i, char j){
+void ft_printnumber(){
+     int i = 1; 
+     int j, k,l; 
       
-}
+     while(i < 2){
+        ft_print('0' + i); 
+        ft_print('\n'); 
+        j = 1 ; 
+        while ( j< 3)
+        {
+         ft_print('0' + j);
+         k = 1; 
+         while (k < 4)
+         {
+             if( i < j && j < k ){
+                ft_print('\n'); 
+                ft_print('0' + i);
+                ft_print('0' + j);
+                ft_print('0' + k);
+             
+             }
 
-void ft_print_comb(void){
-   char  i ; 
-   char  j; 
-    j = '0';
-    i = '0'; 
-   while(i <='0'){
-    ft_putchar(i); 
-    ft_putchar(',');
+             l = 1; 
+             while (l < 5)
+             {
+                  if(i < j && j < k && k < l ){
+                    ft_print('\n'); 
+                ft_print('0' + i);
+                ft_print('0' + j);
+                ft_print('0' + k);
+                 ft_print('0' + l);
+             
+                  }
+                  l++;
+             }
+             
+         k++; 
+         }
+         
+           j++; 
+        }
+        i++; 
+     }
+     
 
-      while(j<='2'){
-          ft_putchar(j); 
-     ft_putchar(',');
-
-          j++; 
-      }
-      i++; 
-
-    
-    
-   }
-
-   
-
-}
-
+    }
 
 int main(){
-   ft_print_comb(); 
-
+    ft_printnumber(); 
 }
